@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+IS:wght@100..400&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * 3. MAIN CONTENT
+ * -- 3a. Playlist
+ * 4. FOOTER
+ * 5. MEDIA QUERIES
+ *************************************************************/
+
+/* 1. GENERAL/DEFAULT STYLES */
+
+:root {
+    --primary-color: #E1EBED;
+    --secondary-color: #291C3A;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font: 20px/normal "Josefin Sans", sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+ol, ul, li, p {
+    margin: 0;
+}
+
+/* 2. HEADER */
+#header {
+    background-color: #B7F1FC;
+}
+
+#header .navbar-brand {
+    font: 50px/normal "Playwrite IS", cursive;
+    color: #000;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+#header .navbar-brand img {
+    width: 100px;
+}
+
+/* 3. MAIN CONTENT */
+#main {
+    flex: 1;
+    background-color: #060F29;
+    color: var(--primary-color);
+}
+
+#main-content {
+    background: url(https://i.pinimg.com/originals/e0/c4/02/e0c402dd9ef03127a27055e91865f605.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+#main-content #mood-form {
+    height: 400px;
+}
+
+#mood-form form {
+    margin-top: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 50px;
+}
+
+#mood-form i {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mood-input {
+    max-height: 200px;
+}
+
+#mood-form .submit-btn {
+    font-size: 50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -- 3a. Playlist */
+.spotify-frame {
+    width: 80%;
+    height: 400px;
+}
+
+/* 4. FOOTER */
+
+#footer {
+    background-color: #B7F1FC;
+    padding: 1em;
+    text-align: center;
+}
+
+/* 5. MEDIA QUERIES */
+
+@media screen and (max-width:768px) {
+    body {
+        font-size: 18px;
+    }
+
+    #main-content {
+        background-position: center;
+    }
+
+    #mood-form form {
+        margin-top: 7rem;
+        padding: 30px;
+    }
+
+    #header .navbar-brand {
+        font-size: 40px;
+        padding-left: 30px;
+    }
+
+    #header .navbar-brand img {
+        width: 80px;
+    }
+
+    #mood-form .submit-btn {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    body {
+        font-size: 16px;
+    }
+
+    #header .navbar-brand {
+        font-size: 35px;
+        padding-left: 00px;
+    }
+
+    #header .navbar-brand img {
+        width: 70px;
+    }
+
+    #mood-form form {
+        padding: 15px;
+    }
+}
